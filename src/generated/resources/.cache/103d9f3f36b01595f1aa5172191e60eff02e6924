@@ -1,0 +1,4 @@
+// 1.20.1	2024-06-25T01:01:09.2424085	Registries
+b6ee29d3680e7227b358b43821f4c5121cfd077c data/firstmod/forge/biome_modifier/add_first_ore.json
+0c9463bf4a9891580360d4d1b14d96cb18222725 data/firstmod/worldgen/configured_feature/first_ore.json
+de1f646fcba5cd406826b37d1ad64d2243067fa8 data/firstmod/worldgen/placed_feature/first_ore_placed.json

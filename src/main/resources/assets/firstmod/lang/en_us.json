@@ -1,0 +1,15 @@
+{
+  "item.firstmod.first": "First Item",
+  "item.firstmod.raw_first": "Raw First",
+
+  "block.firstmod.first_ore": "First Ore",
+
+  "block.firstmod.first_wood": "First Wood",
+  "block.firstmod.first_log": "First Log",
+  "block.firstmod.stripped_first_wood": "Stripped First Wood",
+  "block.firstmod.stripped_first_log": "Stripped First Log",
+  "block.firstmod.first_leaves": "First Leaves",
+  "block.firstmod.first_planks": "First Planks",
+
+  "creativetab.first_tab": "First Mod"
+}

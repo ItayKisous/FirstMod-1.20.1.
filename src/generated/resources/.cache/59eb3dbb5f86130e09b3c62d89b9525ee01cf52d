@@ -1,0 +1,8 @@
+// 1.20.1	2024-06-25T00:20:34.113737	Loot Tables
+a5122a93e8a7f3b4dcad71d4b671df3597602890 data/firstmod/loot_tables/blocks/first_leaves.json
+7c1f26fe9b8336be3aee96fbbe628490096ee435 data/firstmod/loot_tables/blocks/first_log.json
+52fcafaa64ab055437baff74f2c329ced6410159 data/firstmod/loot_tables/blocks/first_ore.json
+2cc8c3e32e907bdc1724a96bed3b64653739fbf8 data/firstmod/loot_tables/blocks/first_planks.json
+f5b4681c2b7ef6105b925491b7b5905e83ee9485 data/firstmod/loot_tables/blocks/first_wood.json
+fec37420aab17bf5ba11e6f50dc18fc3d8776530 data/firstmod/loot_tables/blocks/stripped_first_log.json
+67d24af0077cacd38c59a9994fb3f3af5cef67f1 data/firstmod/loot_tables/blocks/stripped_first_wood.json
