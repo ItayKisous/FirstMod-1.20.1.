@@ -17,6 +17,7 @@ public class ModTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> FIRST_LOGS = tag("first_logs");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(FirstMod.MOD_ID, name));

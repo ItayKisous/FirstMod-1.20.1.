@@ -21,6 +21,7 @@ public class ModCreativeModTab {
                         output.accept(ModItems.FIRST_ITEM.get());
                         output.accept(ModBlocks.FIRST_ORE.get());
                         output.accept(ModItems.RAW_FIRST.get());
+                        output.accept(ModItems.FIRST_STICK.get());
 
                         output.accept(ModBlocks.FIRST_LOG.get());
                         output.accept(ModBlocks.FIRST_WOOD.get());
@@ -28,6 +29,8 @@ public class ModCreativeModTab {
                         output.accept(ModBlocks.STRIPPED_FIRST_WOOD.get());
                         output.accept(ModBlocks.FIRST_LEAVES.get());
                         output.accept(ModBlocks.FIRST_PLANKS.get());
+                        output.accept(ModBlocks.FIRST_SAPLING.get());
+
                     })
                     .build());
 

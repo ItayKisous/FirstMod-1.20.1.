@@ -17,6 +17,9 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_FIRST = ITEMS.register("raw_first",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> FIRST_STICK = ITEMS.register("first_stick",
+            () -> new Item(new Item.Properties()));
+
 
 
     public static void register(IEventBus eventBus) {

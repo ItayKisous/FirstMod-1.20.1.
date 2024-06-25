@@ -3,15 +3,14 @@ package net.itaykisous.firstmod.datagen;
 import net.itaykisous.firstmod.FirstMod;
 import net.itaykisous.firstmod.block.ModBlocks;
 import net.itaykisous.firstmod.item.ModItems;
+import net.itaykisous.firstmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -32,7 +31,31 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pWritter, FIRST_SMELTABLES, RecipeCategory.MISC, ModItems.FIRST_ITEM.get(), 0.25f, 100, "first");
         oreSmelting(pWritter, FIRST_SMELTABLES, RecipeCategory.MISC, ModItems.FIRST_ITEM.get(), 0.25f, 200, "first");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FIRST_STICK.get())
+                .pattern("S ")
+                .pattern(" S")
+                .define('S', ModBlocks.FIRST_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
+                .save(pWritter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.FIRST_PLANKS.get(), 2)
+                .requires(ModTags.Items.FIRST_LOGS)
+                .unlockedBy(getHasName(ModBlocks.FIRST_LOG.get()), has(ModBlocks.FIRST_LOG.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRST_WOOD.get(), 3)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.FIRST_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.FIRST_LOG.get()), has(ModBlocks.FIRST_LOG.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STRIPPED_FIRST_WOOD.get(), 3)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.STRIPPED_FIRST_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.STRIPPED_FIRST_LOG.get()), has(ModBlocks.STRIPPED_FIRST_LOG.get()))
+                .save(pWritter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

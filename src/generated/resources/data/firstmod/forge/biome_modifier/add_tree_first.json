@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_snowy",
+  "features": "firstmod:first_wood_placed",
+  "step": "vegetal_decoration"
+}

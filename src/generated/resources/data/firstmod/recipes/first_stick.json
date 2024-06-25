@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "firstmod:first_planks"
+    }
+  },
+  "pattern": [
+    "S ",
+    " S"
+  ],
+  "result": {
+    "item": "firstmod:first_stick"
+  },
+  "show_notification": true
+}
