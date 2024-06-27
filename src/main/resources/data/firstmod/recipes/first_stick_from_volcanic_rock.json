@@ -1,0 +1,12 @@
+{
+  "type": "firstmod:chipping",
+  "ingredients":[
+    {
+      "item": "firstmod:volcanic_rock"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "firstmod:first_stick"
+  }
+}

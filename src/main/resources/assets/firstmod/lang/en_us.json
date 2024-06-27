@@ -12,6 +12,10 @@
   "block.firstmod.first_leaves": "First Leaves",
   "block.firstmod.first_planks": "First Planks",
   "block.firstmod.first_sapling": "First Sapling",
+  "block.firstmod.volcanic_rock": "Volcanic Rock",
+  "block.firstmod.chipping_table": "Chipping Table",
+
+  "entity.minecraft.villager.firstmod.chipping_villager": "Chipper",
 
   "creativetab.first_tab": "First Mod"
 }

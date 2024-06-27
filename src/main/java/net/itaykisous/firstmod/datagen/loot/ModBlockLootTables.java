@@ -28,6 +28,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_FIRST_WOOD.get());
         this.dropSelf(ModBlocks.FIRST_PLANKS.get());
         this.dropSelf(ModBlocks.FIRST_SAPLING.get());
+        this.dropSelf(ModBlocks.VOLCANIC_ROCK.get());
+        this.dropSelf(ModBlocks.COOLER_VOLCANIC_ROCK.get());
+        this.dropSelf(ModBlocks.SLIGHTLY_COOLED_VOLCANIC_ROCK.get());
+        this.dropSelf(ModBlocks.COOLED_VOLCANIC_ROCK.get());
+        this.dropSelf(ModBlocks.CHIPPING_TABLE.get());
 
         this.add(ModBlocks.FIRST_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.FIRST_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));

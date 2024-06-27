@@ -20,6 +20,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.FIRST_ORE);
+        blockWithItem(ModBlocks.VOLCANIC_ROCK);
+        blockWithItem(ModBlocks.SLIGHTLY_COOLED_VOLCANIC_ROCK);
+        blockWithItem(ModBlocks.COOLER_VOLCANIC_ROCK);
+        blockWithItem(ModBlocks.COOLED_VOLCANIC_ROCK);
 
 
         logBlock(((RotatedPillarBlock) ModBlocks.FIRST_LOG.get()));
@@ -30,6 +34,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_FIRST_WOOD.get()), blockTexture(ModBlocks.STRIPPED_FIRST_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_FIRST_LOG.get()));
 
+
         blockItem(ModBlocks.FIRST_LOG);
         blockItem(ModBlocks.FIRST_WOOD);
         blockItem(ModBlocks.STRIPPED_FIRST_LOG);
@@ -39,6 +44,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(ModBlocks.FIRST_LEAVES);
         saplingBlock(ModBlocks.FIRST_SAPLING);
+
+        simpleBlockWithItem(ModBlocks.CHIPPING_TABLE.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/chipping_table")));
 
     }
 

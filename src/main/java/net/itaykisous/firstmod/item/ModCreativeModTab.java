@@ -30,6 +30,11 @@ public class ModCreativeModTab {
                         output.accept(ModBlocks.FIRST_LEAVES.get());
                         output.accept(ModBlocks.FIRST_PLANKS.get());
                         output.accept(ModBlocks.FIRST_SAPLING.get());
+                        output.accept(ModBlocks.VOLCANIC_ROCK.get());
+                        output.accept(ModBlocks.SLIGHTLY_COOLED_VOLCANIC_ROCK.get());
+                        output.accept(ModBlocks.COOLER_VOLCANIC_ROCK.get());
+                        output.accept(ModBlocks.COOLED_VOLCANIC_ROCK.get());
+                        output.accept(ModBlocks.CHIPPING_TABLE.get());
 
                     })
                     .build());

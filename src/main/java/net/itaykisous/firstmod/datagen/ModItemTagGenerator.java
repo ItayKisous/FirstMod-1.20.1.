@@ -26,6 +26,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.STRIPPED_FIRST_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_FIRST_LOG.get().asItem());
 
+
         this.tag(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.FIRST_LOG.get().asItem())
                 .add(ModBlocks.FIRST_WOOD.get().asItem())

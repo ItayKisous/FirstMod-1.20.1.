@@ -2,8 +2,15 @@ package net.itaykisous.firstmod;
 
 import com.mojang.logging.LogUtils;
 import net.itaykisous.firstmod.block.ModBlocks;
+import net.itaykisous.firstmod.block.entity.ModBlockEntities;
 import net.itaykisous.firstmod.item.ModCreativeModTab;
 import net.itaykisous.firstmod.item.ModItems;
+import net.itaykisous.firstmod.networking.ModMessages;
+import net.itaykisous.firstmod.recipe.ModRecipes;
+import net.itaykisous.firstmod.screen.ChippingTableScreen;
+import net.itaykisous.firstmod.screen.ModMenuTypes;
+import net.itaykisous.firstmod.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,7 +41,16 @@ public class FirstMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
+
 
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -43,7 +59,9 @@ public class FirstMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ModMessages.register();
+        });
     }
 
     // Add the example block item to the building blocks tab
@@ -64,7 +82,7 @@ public class FirstMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            MenuScreens.register(ModMenuTypes.CHIPPING_TABLE_MENU.get(), ChippingTableScreen::new);
         }
     }
 }

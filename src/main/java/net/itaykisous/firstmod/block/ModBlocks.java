@@ -1,6 +1,7 @@
 package net.itaykisous.firstmod.block;
 
 import net.itaykisous.firstmod.FirstMod;
+import net.itaykisous.firstmod.block.custom.ChippingTableBlock;
 import net.itaykisous.firstmod.block.custom.ModFlammableRotatedPillarBlock;
 import net.itaykisous.firstmod.item.ModItems;
 import net.itaykisous.firstmod.worldgen.tree.FirstTreeGrower;
@@ -27,6 +28,28 @@ public class ModBlocks {
     public static final RegistryObject<Block> FIRST_ORE = registerBlock("first_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+
+    public static final RegistryObject<Block> VOLCANIC_ROCK = registerBlock("volcanic_rock",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED,
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)
+                            .requiresCorrectToolForDrops()
+                            .sound(Blocks.BASALT.getSoundType(Blocks.BASALT.defaultBlockState()))));
+
+    public static final RegistryObject<Block> SLIGHTLY_COOLED_VOLCANIC_ROCK = registerBlock("slightly_cooled_volcanic_rock",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED,
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)
+                            .requiresCorrectToolForDrops()
+                            .sound(Blocks.BASALT.getSoundType(Blocks.BASALT.defaultBlockState()))));
+
+    public static final RegistryObject<Block> COOLER_VOLCANIC_ROCK = registerBlock("cooler_volcanic_rock",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED,
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)
+                            .requiresCorrectToolForDrops()
+                            .sound(Blocks.BASALT.getSoundType(Blocks.BASALT.defaultBlockState()))));
+
+    public static final RegistryObject<Block> COOLED_VOLCANIC_ROCK = registerBlock("cooled_volcanic_rock",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED,
+            BlockBehaviour.Properties.copy(Blocks.BASALT).requiresCorrectToolForDrops()));
 
 
     // FIRST WOOD
@@ -80,6 +103,9 @@ public class ModBlocks {
                     return 30;
                 }
             });
+
+    public static final RegistryObject<Block> CHIPPING_TABLE = registerBlock("chipping_table",
+            () -> new ChippingTableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
 
