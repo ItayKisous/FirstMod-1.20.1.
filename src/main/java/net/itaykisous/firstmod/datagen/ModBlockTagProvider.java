@@ -54,5 +54,32 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.FIRST_PLANKS.get());
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.FIRST_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.FIRST_FENCE_GATE.get());
+
+        this.tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.FIRST_FENCE.get());
+
+        this.tag(BlockTags.BUTTONS)
+                .add(ModBlocks.FIRST_BUTTON.get()).addTag(BlockTags.WOODEN_BUTTONS);
+
+        this.tag(BlockTags.TRAPDOORS)
+                .add(ModBlocks.FIRST_TRAPDOOR.get()).addTag(BlockTags.WOODEN_TRAPDOORS);
+
+        this.tag(BlockTags.DOORS)
+                .add(ModBlocks.FIRST_DOOR.get()).addTag(BlockTags.WOODEN_DOORS);
+
+        this.tag(BlockTags.STAIRS)
+                .add(ModBlocks.FIRST_STAIRS.get()).addTag(BlockTags.WOODEN_STAIRS);
+
+        this.tag(BlockTags.SLABS)
+                .add(ModBlocks.FIRST_SLAB.get()).addTag(BlockTags.WOODEN_SLABS);
+
+        this.tag(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.FIRST_PRESSURE_PLATE.get()).addTag(BlockTags.WOODEN_PRESSURE_PLATES);
     }
 }

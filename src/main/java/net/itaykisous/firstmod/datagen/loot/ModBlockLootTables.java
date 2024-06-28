@@ -33,10 +33,31 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.SLIGHTLY_COOLED_VOLCANIC_ROCK.get());
         this.dropSelf(ModBlocks.COOLED_VOLCANIC_ROCK.get());
         this.dropSelf(ModBlocks.CHIPPING_TABLE.get());
+        this.dropSelf(ModBlocks.FIRST_FENCE.get());
+        this.dropSelf(ModBlocks.FIRST_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.FIRST_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.FIRST_STAIRS.get());
+        this.dropSelf(ModBlocks.FIRST_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.FIRST_BUTTON.get());
+
+        this.add(ModBlocks.FIRST_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.FIRST_SLAB.get()));
+        this.add(ModBlocks.FIRST_DOOR.get(),
+                block -> createDoorTable(ModBlocks.FIRST_DOOR.get()));
+
 
         this.add(ModBlocks.FIRST_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.FIRST_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        this.add(ModBlocks.FIRST_SIGN.get(), block ->
+                createSingleItemTable(ModItems.FIRST_SIGN.get()));
+        this.add(ModBlocks.FIRST_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.FIRST_SIGN.get()));
+
+        this.add(ModBlocks.FIRST_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.FIRST_HANGING_SIGN.get()));
+        this.add(ModBlocks.FIRST_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.FIRST_HANGING_SIGN.get()));
     }
 
 

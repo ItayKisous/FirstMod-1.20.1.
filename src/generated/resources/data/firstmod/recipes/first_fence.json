@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "firstmod:first_planks"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "SAS"
+  ],
+  "result": {
+    "count": 3,
+    "item": "firstmod:first_fence"
+  },
+  "show_notification": true
+}

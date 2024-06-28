@@ -7,8 +7,8 @@
     }
   },
   "pattern": [
-    "S ",
-    " S"
+    " S",
+    "S "
   ],
   "result": {
     "item": "firstmod:first_stick"

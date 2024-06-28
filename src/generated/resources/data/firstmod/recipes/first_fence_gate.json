@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "S": {
+      "item": "firstmod:first_planks"
+    }
+  },
+  "pattern": [
+    "ASA",
+    "ASA"
+  ],
+  "result": {
+    "item": "firstmod:first_fence_gate"
+  },
+  "show_notification": true
+}

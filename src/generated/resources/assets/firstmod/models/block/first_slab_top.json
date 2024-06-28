@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "firstmod:block/first_planks",
+    "side": "firstmod:block/first_planks",
+    "top": "firstmod:block/first_planks"
+  }
+}

@@ -1,12 +1,14 @@
 package net.itaykisous.firstmod.block;
 
 import net.itaykisous.firstmod.FirstMod;
-import net.itaykisous.firstmod.block.custom.ChippingTableBlock;
-import net.itaykisous.firstmod.block.custom.ModFlammableRotatedPillarBlock;
+import net.itaykisous.firstmod.block.custom.*;
+import net.itaykisous.firstmod.block.entity.ModSignBlockEntity;
 import net.itaykisous.firstmod.item.ModItems;
+import net.itaykisous.firstmod.util.ModWoodTypes;
 import net.itaykisous.firstmod.worldgen.tree.FirstTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -14,6 +16,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -107,6 +110,42 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHIPPING_TABLE = registerBlock("chipping_table",
             () -> new ChippingTableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> FIRST_STAIRS = registerBlock("first_stairs",
+            () -> new StairBlock(() -> ModBlocks.FIRST_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<Block> FIRST_SLAB = registerBlock("first_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<Block> FIRST_BUTTON = registerBlock("first_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON),
+                    BlockSetType.OAK, 30, true));
+
+    public static final RegistryObject<Block> FIRST_PRESSURE_PLATE = registerBlock("first_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_WOOD),
+                    BlockSetType.OAK));
+
+    public static final RegistryObject<Block> FIRST_FENCE = registerBlock("first_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<Block> FIRST_FENCE_GATE = registerBlock("first_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    public static final RegistryObject<Block> FIRST_DOOR = registerBlock("first_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).noOcclusion(), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> FIRST_TRAPDOOR = registerBlock("first_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).noOcclusion(), BlockSetType.OAK));
+
+    public static final RegistryObject<Block> FIRST_SIGN = BLOCKS.register("first_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.FIRST));
+    public static final RegistryObject<Block> FIRST_WALL_SIGN = BLOCKS.register("first_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.FIRST));
+
+    public static final RegistryObject<Block> FIRST_HANGING_SIGN = BLOCKS.register("first_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.FIRST));
+    public static final RegistryObject<Block> FIRST_WALL_HANGING_SIGN = BLOCKS.register("first_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.FIRST));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

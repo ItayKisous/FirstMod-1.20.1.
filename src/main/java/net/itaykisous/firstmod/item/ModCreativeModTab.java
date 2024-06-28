@@ -22,6 +22,10 @@ public class ModCreativeModTab {
                         output.accept(ModBlocks.FIRST_ORE.get());
                         output.accept(ModItems.RAW_FIRST.get());
                         output.accept(ModItems.FIRST_STICK.get());
+                        output.accept(ModItems.FIRST_SIGN.get());
+                        output.accept(ModItems.FIRST_HANGING_SIGN.get());
+                        output.accept(ModItems.FIRST_BOAT.get());
+                        output.accept(ModItems.FIRST_CHEST_BOAT.get());
 
                         output.accept(ModBlocks.FIRST_LOG.get());
                         output.accept(ModBlocks.FIRST_WOOD.get());
@@ -35,6 +39,16 @@ public class ModCreativeModTab {
                         output.accept(ModBlocks.COOLER_VOLCANIC_ROCK.get());
                         output.accept(ModBlocks.COOLED_VOLCANIC_ROCK.get());
                         output.accept(ModBlocks.CHIPPING_TABLE.get());
+                        output.accept(ModBlocks.FIRST_SLAB.get());
+                        output.accept(ModBlocks.FIRST_STAIRS.get());
+                        output.accept(ModBlocks.FIRST_FENCE.get());
+                        output.accept(ModBlocks.FIRST_FENCE_GATE.get());
+                        output.accept(ModBlocks.FIRST_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.FIRST_BUTTON.get());
+                        output.accept(ModBlocks.FIRST_DOOR.get());
+                        output.accept(ModBlocks.FIRST_TRAPDOOR.get());
+
+
 
                     })
                     .build());

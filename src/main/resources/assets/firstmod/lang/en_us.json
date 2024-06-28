@@ -2,9 +2,19 @@
   "item.firstmod.first": "First Item",
   "item.firstmod.first_stick": "First Stick",
   "item.firstmod.raw_first": "Raw First",
+  "item.firstmod.first_boat": "First Boat",
+  "item.firstmod.first_chest_boat": "First Chest Boat",
 
   "block.firstmod.first_ore": "First Ore",
 
+  "block.firstmod.first_button": "First Button",
+  "block.firstmod.first_stairs": "First Stairs",
+  "block.firstmod.first_slab": "First Slab",
+  "block.firstmod.first_pressure_plate": "First Pressure Plate",
+  "block.firstmod.first_fence": "First Fence",
+  "block.firstmod.first_fence_gate": "First Fence Gate",
+  "block.firstmod.first_door": "First Door",
+  "block.firstmod.first_trapdoor": "First Trapdoor",
   "block.firstmod.first_wood": "First Wood",
   "block.firstmod.first_log": "First Log",
   "block.firstmod.stripped_first_wood": "Stripped First Wood",
@@ -14,8 +24,12 @@
   "block.firstmod.first_sapling": "First Sapling",
   "block.firstmod.volcanic_rock": "Volcanic Rock",
   "block.firstmod.chipping_table": "Chipping Table",
+  "block.firstmod.first_sign": "First Sign",
+  "block.firstmod.first_hanging_sign": "First Hanging Sign",
+
 
   "entity.minecraft.villager.firstmod.chipping_villager": "Chipper",
+  "entity.firstmod.mod_chest_boat": "Boat with Chest",
 
   "creativetab.first_tab": "First Mod"
 }

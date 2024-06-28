@@ -7,6 +7,7 @@ import net.itaykisous.firstmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -32,8 +33,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWritter, FIRST_SMELTABLES, RecipeCategory.MISC, ModItems.FIRST_ITEM.get(), 0.25f, 200, "first");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.FIRST_STICK.get())
-                .pattern("S ")
                 .pattern(" S")
+                .pattern("S ")
                 .define('S', ModBlocks.FIRST_PLANKS.get())
                 .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
                 .save(pWritter);
@@ -55,6 +56,62 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SS")
                 .define('S', ModBlocks.STRIPPED_FIRST_LOG.get())
                 .unlockedBy(getHasName(ModBlocks.STRIPPED_FIRST_LOG.get()), has(ModBlocks.STRIPPED_FIRST_LOG.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRST_SLAB.get(), 6)
+                .pattern("SSS")
+                .define('S', ModBlocks.FIRST_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRST_STAIRS.get(), 4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', ModBlocks.FIRST_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRST_FENCE_GATE.get(), 1)
+                .pattern("ASA")
+                .pattern("ASA")
+                .define('S', ModBlocks.FIRST_PLANKS.get())
+                .define('A', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRST_FENCE.get(), 3)
+                .pattern("SAS")
+                .pattern("SAS")
+                .define('S', ModBlocks.FIRST_PLANKS.get())
+                .define('A', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRST_PRESSURE_PLATE.get(), 1)
+                .pattern("SS")
+                .define('S', ModBlocks.FIRST_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRST_DOOR.get(), 3)
+                .pattern("SS")
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.FIRST_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
+                .save(pWritter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.FIRST_TRAPDOOR.get(), 2)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.FIRST_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
+                .save(pWritter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.FIRST_BUTTON.get(), 1)
+                .requires(ModBlocks.FIRST_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.FIRST_PLANKS.get()), has(ModBlocks.FIRST_PLANKS.get()))
                 .save(pWritter);
     }
 
